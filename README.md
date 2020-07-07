@@ -1,5 +1,9 @@
-#Code Challenge Solution
-This is assignment solution for HSBC code challenge
+# Code Challenge Solution
+    This is assignment solution for HSBC code challenge.
+    
+# Requirements
+* Maven 3.3.3
+* Java 1.8
 
 ## Run
 `mvn spring-boot:run` starts application on localhost:8080
