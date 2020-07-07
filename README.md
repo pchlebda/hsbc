@@ -1,5 +1,5 @@
 # Code Challenge Solution
-    This is assignment solution for HSBC code challenge.
+    This is assignment solution for HSBC code challenge. The app was developed in java using Spring Boot.
     
 # Requirements
 * Maven 3.3.3
@@ -28,7 +28,7 @@ Request body:
 
 ## Wall
 
-#### GET http://localhost:8080/api/v1/posts/{username}
+### GET http://localhost:8080/api/v1/posts/{username}
 
 Response body:
 
