@@ -1,5 +1,6 @@
 package com.hsbc.twitter.service;
 
+import com.hsbc.twitter.dto.FollowUser;
 import com.hsbc.twitter.dto.MessagePost;
 import com.hsbc.twitter.storage.FollowersStorage;
 import com.hsbc.twitter.storage.MessageStorage;
@@ -26,6 +27,7 @@ public class MessageService {
     }
 
     public List<MessagePost> getAllPostMessagesForUser(final String username) {
+        messageStorage.checkIfUserExists(username);
         return messageStorage.getAllMessagesSortedByDate(username);
     }
 

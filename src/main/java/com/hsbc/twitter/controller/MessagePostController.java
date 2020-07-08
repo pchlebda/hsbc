@@ -1,5 +1,6 @@
 package com.hsbc.twitter.controller;
 
+import com.hsbc.twitter.dto.FollowUser;
 import com.hsbc.twitter.dto.MessagePost;
 import com.hsbc.twitter.service.MessageService;
 import lombok.RequiredArgsConstructor;

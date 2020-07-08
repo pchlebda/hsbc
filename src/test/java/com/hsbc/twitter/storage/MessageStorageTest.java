@@ -1,6 +1,7 @@
 package com.hsbc.twitter.storage;
 
 import com.hsbc.twitter.dto.MessagePost;
+import com.hsbc.twitter.exception.UserDoesNotExist;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -59,6 +60,17 @@ class MessageStorageTest {
             Assertions.assertTrue(minutes >= 0);
             prev = actual;
         }
+    }
+
+    @Test
+    void shouldThrowExceptionWhenUserDoeNotExist() {
+        //when
+        UserDoesNotExist userDoesNotExist = Assertions.assertThrows(UserDoesNotExist.class, () -> {
+            testee.checkIfUserExists("Bob");
+        });
+
+        //then
+        Assertions.assertEquals("User 'Bob' does not exist!", userDoesNotExist.getMessage());
     }
 
     private List<MessagePost> getListOf100Message() {

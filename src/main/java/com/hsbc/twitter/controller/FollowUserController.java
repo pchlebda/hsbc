@@ -19,7 +19,7 @@ public class FollowUserController {
 
     @PostMapping("/api/v1/users/follow")
     @ResponseStatus(HttpStatus.CREATED)
-    void createPost(@Valid @RequestBody final FollowUser followUser) {
+    void followUser(@Valid @RequestBody final FollowUser followUser) {
         followService.followUser(followUser);
     }
 }

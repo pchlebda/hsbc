@@ -26,6 +26,10 @@ Request body:
     	"message":"Sample message"
     }
 
+#### Http status code
+* 201 when message post has been created.
+* 400 when body is invalid e.g message length exceeds 140 chars.
+
 ## Wall
 
 ### GET http://localhost:8080/api/v1/posts/{username}
@@ -44,6 +48,10 @@ Response body:
             "createdAt": "2020-07-07 18:57:06"
         }
     ]
+
+#### Http status code
+* 200 when all posts are returned.
+* 400 when username does not exist.
     
 ## Following
 
@@ -55,7 +63,10 @@ Request body:
     	"username":"Alice",
     	"followUsername":"Bob"
     }
-    
+ 
+ #### Http status code
+ * 200 when username successfully follows followUsername.
+ * 400 when username or followUsername does not exist.   
  
  ## Timeline
  
@@ -85,3 +96,7 @@ Response body:
             "createdAt": "2020-07-07 18:54:06"
         }
     ]
+    
+ #### Http status code
+* 200 when all posts are returned.
+* 400 when username does not exist.
